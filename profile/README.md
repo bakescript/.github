@@ -1,4 +1,4 @@
-# Manifesto BakeScript
+# BakeScript
 
 ## Uma Ferramenta, Todo o Ecossistema
 
