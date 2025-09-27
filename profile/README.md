@@ -1,37 +1,107 @@
-[🇧🇷 Leia em Português](./README.pt-BR.md) | [🇺🇸 Read in English](./README.md)
+# Manifesto BakeScript
 
-# Bake
+## Uma Ferramenta, Todo o Ecossistema
 
-Welcome to **Bake**! This repository brings together a collection of open-source tools and frameworks designed to empower web developers in creating robust and high-performance interfaces. Created by [@deMGoncalves](https://github.com/deMGoncalves), **Bake** is the home of projects like **-O-id** and **-O-ego**, which focus on the efficient construction of Web Components.
+JavaScript merece melhor que um labirinto de ferramentas desconectadas. BakeScript é um compilador completo que unifica tudo que você precisa em uma única solução.
 
-Our focus is to simplify the development of high-performance web components by providing flexible and intuitive tools that facilitate the creation of modern and reactive interfaces.
+## O Problema
 
-## Projects
+Desenvolver JavaScript hoje significa gerenciar dezenas de ferramentas:
+- Babel ou TypeScript para transpilação
+- Prettier + ESLint para formatação e linting
+- Jest ou Vitest para testes
+- Webpack ou Vite para bundling
+- TypeScript LSP para editor
+- JSDoc para documentação
+- Express ou similar para dev server
 
-### -O-id
+Cada uma com sua configuração, versões conflitantes, integrações quebradas.
 
-**-O-id** is a powerful library for developing custom Web Components. Inspired by the psychoanalysis of Sigmund Freud, the name "-O-id" symbolizes the primitive and essential foundation of every web component. The library is designed to be the foundation of high-performance interfaces, allowing developers to create reusable, highly efficient, and easy-to-maintain components.
+## Nossa Solução: 6 Ferramentas em 1
 
-With **-O-id**, you can take advantage of a series of decorators that facilitate the creation and lifecycle of components, making development smoother and less verbose. The simplicity and flexibility of **-O-id** make it ideal for those looking to create dynamic interfaces with complete control over reactivity and performance.
+### 🔧 **Compilador Real**
+Não um transpilador que apenas transforma sintaxe. Um compilador verdadeiro que analisa, otimiza e gera código nativo JavaScript com garantias de correção.
 
-Learn more about **-O-id** [here](https://github.com/bake-js/-O-id).
+### ⚡ **Language Server Protocol**
+`bake lsp` - Integração perfeita com qualquer editor. Autocompletar, diagnostics em tempo real, refatoração segura.
 
-### -O-ego
+### 📚 **Gerador de Documentação**
+`bake doc` - Documentação automática extraída do código e comentários. Markdown, HTML ou formato customizado.
 
-**-O-ego** is the natural extension of **-O-id** to the user interface layer. While **-O-id** represents the foundation of components, **-O-ego** is responsible for balancing form and function, delivering a smooth and highly performant visual experience. Inspired by the Freudian "ego," which balances impulses with reality, **-O-ego** acts as a bridge between the backend and the interface, ensuring that business logic translates into efficient visual components.
+### 🧪 **Framework de Testes**
+`bake test` - Testes unitários, integração e coverage. Sem configuração, máxima performance.
 
-With **-O-ego**, developers have access to a library of ready-to-use UI Components that are fully customizable and optimized for performance. Whether creating responsive layouts or interactive components, **-O-ego** provides the necessary balance to build scalable and modern interfaces.
+### 🚀 **Dev Server**
+`bake dev` - Hot reload inteligente, proxy configurável, HTTPS automático. Desenvolvimento sem fricção.
 
-Explore more about **-O-ego** [here](https://github.com/bake-js/-O-ego).
+### 🔍 **Linter**
+`bake lint` - Análise estática profunda. Não apenas estilo, mas bugs potenciais, performance e segurança.
 
-## About Bake
+## Zero Configuration, Máxima Flexibilidade
 
-**Bake** is a collection of projects created to simplify the web development process, with an emphasis on Web Components and performance. Conceptualized by [@deMGoncalves](https://github.com/deMGoncalves), Bake aims to provide tools that enable developers to transform concepts into interfaces quickly and effectively without compromising performance.
+```bash
+# Instale uma vez
+npm install -g bakescript
 
-## Contributing
+# Use imediatamente
+bake build      # Compila seu projeto
+bake dev        # Inicia desenvolvimento
+bake test       # Executa todos os testes
+bake lint       # Formata e verifica qualidade
+bake doc        # Gera documentação
+```
 
-Contributions are always welcome! If you want to collaborate on **-O-id**, **-O-ego**, or any other Bake project, visit the individual repositories to learn more about how to contribute.
+Sem arquivos de configuração. Sem dependências conflitantes. Sem setup complexo.
 
-## License
+Mas quando precisar customizar, uma única configuração controla tudo:
 
-All projects under **Bake** are open-source and licensed under the MIT License. This means you are free to use, modify, and distribute the code as long as you follow the terms of the license.
+```json
+{
+  "target": "node18",
+  "format": "compact",
+  "tests": "./tests/**/*.js",
+  "docs": { "output": "docs/", "format": "html" }
+}
+```
+
+## Por Que Unificar?
+
+### **Consistência**
+Todas as ferramentas compartilham o mesmo entendimento do seu código. Sem interpretações conflitantes.
+
+### **Performance**
+Análise única serve múltiplas funções. Parse uma vez, use seis vezes.
+
+### **Manutenibilidade**
+Uma ferramenta para atualizar. Uma documentação para consultar. Uma configuração para gerenciar.
+
+### **Confiabilidade**
+Integração testada e garantida. Sem surpresas de incompatibilidade.
+
+### **Simplicidade**
+Desenvolvedores focam no código, não na toolchain.
+
+## Nossa Promessa
+
+- **Para iniciantes**: Começe a codificar imediatamente, sem configuração
+- **Para profissionais**: Ferramentas avançadas sem complexidade desnecessária  
+- **Para equipes**: Consistência garantida em todos os projetos
+- **Para CI/CD**: Um comando, verificação completa
+
+## O Futuro do Desenvolvimento JavaScript
+
+Outras linguagens já entenderam: Rust tem `cargo`, Go tem `go`, Zig tem `zig`. 
+
+JavaScript merece a mesma experiência unificada.
+
+**BakeScript é essa ferramenta.**
+
+Não mais gerenciamento de dependências conflitantes.  
+Não mais configuração de dezenas de ferramentas.  
+Não mais quebras de integração entre versões.
+
+Apenas JavaScript, desenvolvido da forma certa.
+
+---
+
+*BakeScript - JavaScript com ferramentas que funcionam juntas.*
